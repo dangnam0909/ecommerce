@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->text('content');
-            $table->integer('rating')->nulable();
+            $table->integer('rating')->nullable();
             $table->timestamp('date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps();
         });

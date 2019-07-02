@@ -104,7 +104,7 @@
 								<div class="form-group" >
 										<label>Ảnh chính sản phẩm<span style="color: red;">*</span></label>
 										<input id="img" type="file" name="img" class="form-control hidden" onchange="changeImg(this)">
-					                    <img id="avatar" class="thumbnail" width="300px" src="{{asset('images/new_seo-10-512.png')}}">
+					                    <img id="avatar" class="thumbnail" width="300px" src="{{asset('images/click.png')}}">
 					                    @if($errors->has('img'))
 			    							<span class="" style="color:red;font-size: 13px">{{$errors->first('img')}}</span>
 			    						@endif

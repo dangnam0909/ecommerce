@@ -235,7 +235,7 @@ style comment*/
 						<form >
 							@csrf
 						<div class="options" style="line-height: 15px">	
-							<h4 class="m_9">Chọn một kích thước(*)</h4>
+							<h4 class="m_9">Chọn một size(*)</h4>
 							<div style="padding: 0px 15px 15px 0px;">
 								<?php $quantity = 0; ?>
 								@foreach ($product->productSizes as $productSize) 
@@ -302,10 +302,10 @@ style comment*/
 	    			
 	                <div class="social_single">	
 					   <ul>	
-						  <li class="fb"><a href="https://www.facebook.com/anhthikhonge.anhthichnhuthe"><span> </span></a></li>
+						  <li class="fb"><a href="https://www.facebook.com/rooneynam91"><span> </span></a></li>
 						  <li class="tw"><a href="#"><span> </span></a></li>
 						  <li class="g_plus"><a href="https://mail.google.com"><span> </span></a></li>
-						  <li class="rss"><a href="https://www.instagram.com/lleducmanh/"><span> </span></a></li>		
+						  <li class="rss"><a href="https://www.instagram.com/namdangnguyen09/"><span> </span></a></li>		
 					   </ul>
 				    </div>
 				</div>
@@ -335,7 +335,7 @@ style comment*/
 								<td><br><img src="{{asset('images/hotro.png')}}" alt=""></td>
 								<td>
 									<p><b>Hỗ trợ Online</b>
-									<br>0933880767 - 01222980259</p>
+									<br>0902438246 - 01222980259</p>
 								</td>
 							</tr>
 				

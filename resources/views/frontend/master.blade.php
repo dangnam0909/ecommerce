@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>MV Shoes | @yield('title')</title>
+<title>NL FASHTION | @yield('title')</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
@@ -200,7 +200,7 @@
             <!-- nav -->
             <div class="top d-md-flex">
                 <div id="logo">
-                    <h1><a href="{{route('home-user')}}"><img src="{{asset('images/HVC-logo.PNG')}}" style="width: 250px" alt=""></a></h1>
+                    <h1><a href="{{route('home-user')}}"><img src="{{asset('images/1234.png')}}" style="width: 250px" alt=""></a></h1>
                 </div>
                 <div class="search-form mx-md-auto">
                     <div class="form-w3layouts-grid">
@@ -210,7 +210,7 @@
                             <ul id="getLiveSearch" style="z-index: 1;background-color: #fff;position: absolute;top: 48%;width: 400px;font-size: 11px;">
                                 <!-- <li  style="border-bottom: 1px dotted #ccc;padding-bottom: 10px;">
                                         <div style="float: left;width: 20%;">
-                                            <a href=""><img src="{{asset('images/product/giay1.jpg')}}" alt="a" ></a>
+                                            <a href=""><img src="{{asset('images/product/ao1.jpg')}}" alt="a" ></a>
                                         </div>
                                         <div>
                                             <br><a href="" style="color: #000;">GIÀY ADIDAS SUPERSTAR "WHITE/BLUE" GOLD STAMP A</a>
@@ -352,7 +352,7 @@
             </div>
             <div class="col-sm-3">
                 <h4 class="textbot">SIGN UP FOR INFORMATION</h4>
-                <iframe src="https://www.facebook.com/Shopcomputernam-883815598647209/?modal=admin_todo_tour" width="340" height="260px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://sakurafashion.vn/" width="340" height="260px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
         

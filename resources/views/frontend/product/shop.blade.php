@@ -215,7 +215,7 @@
                 }
                 //alert(size_id);
                 if (typeof  size_id == "undefined") {
-					alert('Bạn chưa chọn kích thước!');
+					alert('Bạn chưa chon size!');
 				}else{
 					$.ajax({
 							url: "{{route('add-cart-user')}}",
