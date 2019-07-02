@@ -4,7 +4,7 @@
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Sản phẩm</h1>
+				<h1 class="page-header">Product</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -32,7 +32,7 @@
 											<th width="10%" style="text-align: center;">Tên Sản phẩm</th>
 											<th style="text-align: center;">Giá sản phẩm</th>
 											<th style="text-align: center;">Khuyến mãi</th>
-											<th style="text-align: center;" width="5%">Size giày</th>
+											<th style="text-align: center;" width="5%">Size</th>
 											<th style="text-align: center;">Số lượng</th>
 											<th width="10%" style="text-align: center;">Ảnh sản phẩm</th>
 											<th style="text-align: center;" width="15%">Mô tả</th>

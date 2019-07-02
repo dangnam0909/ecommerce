@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-9 text-left">
                             <h6>Phone Number</h6>
-                            <p>+ 0356796378</p>
+                            <p>+ 090 2438 246</p>
                         </div>
                     </div>
                 </li>
@@ -103,7 +103,7 @@
                     <p>Call us, we are 24/7 Helpline</p>
                 </div>
                 <div class="col-sm-6 text-sm-right mt-sm-0 mt-3">
-                    <h3><span class="fa fa-phone" aria-hidden="true"></span> +0356 796 738</h3>
+                    <h3><span class="fa fa-phone" aria-hidden="true"></span> +0902 438 246</h3>
                 </div>
             </div>
         </div>

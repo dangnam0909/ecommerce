@@ -12,28 +12,20 @@ class SizeTableSeeder extends Seeder
     public function run()
     {
         DB::table('sizes')->insert([
-        	[
-            'name' => '38',           
-        ],[
-            'name' => '39',
+        [
+            'name' => 'M',           
         ],
         [
-            'name' => '40',
+            'name' => 'L',
         ],
         [
-            'name' => '41',
+            'name' => 'S',
         ],
         [
-            'name' => '42',
+            'name' => 'XL',
         ],
         [
-            'name' => '43',
-        ],
-        [
-            'name' => '44',
-        ],
-        [
-            'name' => '45',
+            'name' => 'XXL',
         ]
     ]);
     }

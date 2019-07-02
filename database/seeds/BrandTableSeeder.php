@@ -14,18 +14,18 @@ class BrandTableSeeder extends Seeder
     {
         DB::table('brands')->insert([
         	[
-            'name' => 'Adidas',
-            'slug' => 'adidas',
+            'name' => 'Chanel',
+            'slug' => 'chanel',
             'description' => Str::random(30),
             
         ],[
-            'name' => 'Nike',
-            'slug' => 'nike',
+            'name' => 'BlueXchange',
+            'slug' => 'bluexchange',
             'description' => Str::random(30),
         ],
         [
-            'name' => 'Fila',
-            'slug' => 'fila',
+            'name' => 'PT2000',
+            'slug' => 'pt2000',
             'description' => Str::random(30),
         ],
         [

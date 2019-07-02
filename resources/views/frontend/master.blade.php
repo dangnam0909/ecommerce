@@ -200,7 +200,7 @@
             <!-- nav -->
             <div class="top d-md-flex">
                 <div id="logo">
-                    <h1><a href="{{route('home-user')}}"><img src="{{asset('images/logo1.png')}}" style="width: 250px" alt=""></a></h1>
+                    <h1><a href="{{route('home-user')}}"><img src="{{asset('images/HVC-logo.PNG')}}" style="width: 250px" alt=""></a></h1>
                 </div>
                 <div class="search-form mx-md-auto">
                     <div class="form-w3layouts-grid">
@@ -276,16 +276,16 @@
                                                     </div>
                                                 @endforeach
                                             <div class="row" style="text-align: left;">
-                                                <span style="margin-left: 40px;margin-top: 20px">Tổng tiền:  <span style="font-size: 15px;color: #ed4e4e;margin-left: 40px" >{{number_format(Cart::getTotal())}} ₫</span></span>
+                                                <span style="margin-left: 40px;margin-top: 20px">Total:  <span style="font-size: 15px;color: #ed4e4e;margin-left: 40px" >{{number_format(Cart::getTotal())}} ₫</span></span>
                                             </div>
                                             </div>
                                             
                                             <div class="row" style="margin-top: 10px">
-                                                <a href="{{route('shoppingCart-user')}}" style="color: #fff;background: #000;text-decoration: none;padding: 7px 20px;margin-right: 10px;border-radius: 0;margin-left: 30px;">XEM GIỎ HÀNG</a>
+                                                <a href="{{route('shoppingCart-user')}}" style="color: #fff;background: #000;text-decoration: none;padding: 7px 20px;margin-right: 10px;border-radius: 0;margin-left: 30px;">View Card</a>
                                                 @if(Cart::getTotal() > 0)
-                                                <a href="{{route('show-checkout-user')}}" style="color: #fff;background: #f72b3f;text-decoration: none;padding: 7px 20px;border-radius: 0">THANH TOÁN</a>
+                                                <a href="{{route('show-checkout-user')}}" style="color: #fff;background: #f72b3f;text-decoration: none;padding: 7px 20px;border-radius: 0">Pay</a>
                                                 @else
-                                                <a href="{{route('shoppingCart-user')}}" style="color: #fff;background: #f72b3f;text-decoration: none;padding: 7px 20px;border-radius: 0">THANH TOÁN</a>
+                                                <a href="{{route('shoppingCart-user')}}" style="color: #fff;background: #f72b3f;text-decoration: none;padding: 7px 20px;border-radius: 0">Pay</a>
                                                 @endif
                                             </div>
                                         </li>
@@ -294,32 +294,36 @@
                             </ul>
                 </div>
             </div>
-            <nav class="text-center menutop" id="menuTop" style="margin-top:0;padding-bottom: 15px;">
+            {{-- <nav class="text-center menutop" id="menuTop" style="margin-top:0;padding-bottom: 15px;">
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop" />
                 <ul class="menu" >
-                    <li class="active"><a href="{{route('home-user')}}" style="text-decoration: none;">Trang chủ</a></li>
-                    
-                    @foreach($categories as $category)
-                    <li><a href="{{asset('san-pham/'.$category->id.'/'.$category->name)}}" style="text-decoration: none;">{{$category->name}}</a></li>
+                    <li class="active">
+                        <a href="{{ route('home-user') }}" style="text-decoration: none;">Home</a>
+                    </li>
+                        @foreach($categories as $category)
+                    <li>
+                        <a href="{{ asset('san-pham/'.$category->id.'/'.$category->name) }}" style="text-decoration: none;">{{ $category->name }}</a>
+                    </li>
                     @endforeach
                     <li>
                         <!-- First Tier Drop Down -->
-                        <label for="drop-2" class="toggle">Thương hiệu<span class="fa fa-angle-down" aria-hidden="true"></span>
+                        <label for="drop-2" class="toggle">Brand <span class="fa fa-angle-down" aria-hidden="true"></span>
                         </label>
-                        <a href="#" style="text-decoration: none;">Thương hiệu<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                        <a href="#" style="text-decoration: none;">Brand <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                         <input type="checkbox" id="drop-2" />
                         <ul style="z-index: 1;">
                             @foreach($brands as $brand)
-                            <li><a href="{{asset('san-pham/'.$brand->id.'/hang/'.$brand->name)}}" class="drop-text" style="text-decoration: none;">{{$brand->name}}</a></li>
+                            <li><a href="{{ asset('san-pham/'.$brand->id.'/'.$brand->name) }}" class="drop-text" style="text-decoration: none;">{{ $brand->name }}</a></li>
                             @endforeach
 
                         </ul>
                     </li>
-                     <li><a href="{{route('list-all-product')}}" style="text-decoration: none;">Sản phẩm</a></li>
-                    <li><a href="{{route('contact-user')}}"  style="text-decoration: none;">Liên hệ</a></li>
+                        <li><a href="{{ route('list-all-product') }}" style="text-decoration: none;">Shop</a></li>
+                    <li><a href="events.html" style="text-decoration: none;">Events</a></li>
+                    <li><a href="contact.html"  style="text-decoration: none;">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> --}}
             <!-- //nav -->
         </div>
     </header>
@@ -328,27 +332,27 @@
         <div class="container-fluid divfooter" >    
         <div class="container divfooter">
             <div class="col-sm-3">
-                <h4 class="textbot">LIÊN HỆ</h4>
+                <h4 class="textbot">CONTACT</h4>
                 <p class="textbot1">82 Bui Van Thai, Phường Hòa Hải, Quận Ngũ Hành Sơn, Tp. Đà Nẵng</p>
                 <p class="textbot1">Phone: 0902 438  246 - DangNam09</p>
                 <p class="textbot1">Email: namdangnguyen09@gmail.com</p>
             </div>
             <div class="col-sm-3">
-                <h4 class="textbot">CHÍNH SÁCH HỖ TRỢ</h4>
-                <p><a href="index.php">Trang chủ</a></p>
-                <p><a href="@">Sản phẩm</a></p>
-                <p><a href="@">Giới thiệu</a></p>
-                <p><a href="@">Bảng Size Giày</a></p>
+                <h4 class="textbot">SUPPORTING POLICIES</h4>
+                <p><a href="index.php">Index</a></p>
+                <p><a href="@">Product</a></p>
+                <p><a href="@">About</a></p>
+                <p><a href="@">Table Size</a></p>
                 <p><a href="@">Hướng dẫn đặt hàng</a></p>
-                <p style="color: #fff;">Design by Nguyen Dang Nam IT 2019</p>
+                <p style="color: #fff;">Design by Nam - Linh IT 2019</p>
             </div>
             <div class="col-sm-3">
-                <h4 class="textbot">LIÊN KẾT</h4>
+                <h4 class="textbot">LINK</h4>
                 <p class="textbot1">Hãy kết nối với chúng tôi.</p>
             </div>
             <div class="col-sm-3">
-                <h4 class="textbot">ĐĂNG KÝ NHẬN THÔNG TIN</h4>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%25A9c-M%25E1%25BA%25A1nh-It-Shoes-499971113855110%2F%3Fmodal%3Dadmin_todo_tour&tabs=timeline&width=340&height=260px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="260px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <h4 class="textbot">SIGN UP FOR INFORMATION</h4>
+                <iframe src="https://www.facebook.com/Shopcomputernam-883815598647209/?modal=admin_todo_tour" width="340" height="260px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
         

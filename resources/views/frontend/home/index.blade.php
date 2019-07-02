@@ -39,13 +39,13 @@
 					</div>
 				<div class="container" style="padding: 30px">
 					<div class="col-sm-2">
-						<a href="@"><img src="{{asset('images/thuonghieu/adidas.png')}}" width="130px"></a>
+						<a href="@"><img src="{{asset('images/thuonghieu/chanel.jpg')}}" width="130px"></a>
 					</div>
 					<div class="col-sm-2">
-						<a href="@"><img src="{{asset('images/thuonghieu/nike.png')}}" width="130px"></a>
+						<a href="@"><img src="{{asset('images/thuonghieu/blue.jpeg')}}" width="130px"></a>
 					</div>
 					<div class="col-sm-2">
-						<a href="@"><img src="{{asset('images/thuonghieu/puma.png')}}" width="130px"></a>
+						<a href="@"><img src="{{asset('images/thuonghieu/pt.jpg')}}" width="130px"></a>
 					</div>
 					<div class="col-sm-2">
 						<a href="@"><img src="{{asset('images/thuonghieu/jordam.png')}}" width="130px"></a>

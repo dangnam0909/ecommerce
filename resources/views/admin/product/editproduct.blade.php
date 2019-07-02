@@ -40,7 +40,7 @@
 			    						@endif
 									</div>									
 									<div class="form-group">
-										<label>Size Giày<span style="color: red;">*</span></label>
+										<label>Size<span style="color: red;">*</span></label>
 										@php
 											$listSize= $product->sizes->pluck('id')->toArray();
 										@endphp

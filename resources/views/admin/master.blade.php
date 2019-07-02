@@ -20,7 +20,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ route('home-admin')}}">MV SHOES | Admin</a>
+				<a class="navbar-brand" href="{{ route('home-admin')}}">NL FASHTION | Admin</a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>Admin: {{Auth::user()->name}}<span class="caret"></span></a>
@@ -40,12 +40,12 @@
 		</div>
 		<ul class="nav menu">
 			<li role="presentation" class="divider"></li>
-			<li class="active"><a href="{{ route('home-admin')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Trang chủ</a></li>
-			<li><a href="{{route('product-admin')}}"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Sản phẩm</a></li>
-			<li><a href="{{route('category-admin')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Danh mục</a></li>
-			<li><a href="{{route('user-admin')}}"><svg class="glyph stroked male user"><use xlink:href="#stroked-male-user"></use></svg> Tài khoản</a></li>
-			<li><a href="{{route('order-admin')}}"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Đơn hàng</a></li>
-			<li><a href="{{route('comment-admin')}}"><svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"/></svg> Bình luận</a></li>
+			<li class="active"><a href="{{ route('home-admin')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Index</a></li>
+			<li><a href="{{route('product-admin')}}"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg>Product</a></li>
+			<li><a href="{{route('category-admin')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Category</a></li>
+			<li><a href="{{route('user-admin')}}"><svg class="glyph stroked male user"><use xlink:href="#stroked-male-user"></use></svg> Account</a></li>
+			<li><a href="{{route('order-admin')}}"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Order</a></li>
+			<li><a href="{{route('comment-admin')}}"><svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"/></svg> Comment</a></li>
 			<li role="presentation" class="divider"></li>
 		</ul>
 		
