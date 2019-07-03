@@ -14,36 +14,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+	$(document).ready(function() {
+		$(".dropdown img.flag").addClass("flagvisibility");
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
+		$(".dropdown dt a").click(function() {
+			$(".dropdown dd ul").toggle();
+		});
+					
+		$(".dropdown dd ul li a").click(function() {
+			var text = $(this).html();
+			$(".dropdown dt a span").html(text);
+			$(".dropdown dd ul").hide();
+			$("#result").html("Selected value is: " + getSelectedValue("sample"));
+		});
+					
+		function getSelectedValue(id) {
+			return $("#" + id).find("dt a span.value").html();
+		}
 
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
+		$(document).bind('click', function(e) {
+			var $clicked = $(e.target);
+			if (! $clicked.parents().hasClass("dropdown"))
+				$(".dropdown dd ul").hide();
+		});
 
 
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
+		$("#flagSwitcher").click(function() {
+			$(".dropdown img.flag").toggleClass("flagvisibility");
+		});
+	});
+</script>
 <!-- start menu -->     
 <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
@@ -52,14 +52,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- top scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-   <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 		});
-	</script>
+	});
+</script>
 </head>
 <body>
   <div class="header-top">
@@ -68,12 +68,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a href="index.html"><img src="images/logo.png" alt=""/></a>
 	    </div>
 	    <div class="cssmenu">
-		   <ul>
-			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
-			 <li><a href="shop.html">Store Locator</a></li> 
-			 <li><a href="login.html">My Account</a></li> 
-			 <li><a href="checkout.html">CheckOut</a></li> 
-		   </ul>
+			<ul>
+				<li class="active"><a href="register.html">Sign up & Save</a></li> 
+				<li><a href="shop.html">Store Locator</a></li> 
+				<li><a href="login.html">My Account</a></li> 
+				<li><a href="checkout.html">CheckOut</a></li> 
+			</ul>
 		</div>
 		<ul class="icon2 sub-icon2 profile_img">
 			<li><a class="active-icon c2" href="#"> </a>
@@ -826,17 +826,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
        </div>
        <script type="text/javascript">
 			$(document).ready(function() {
-			
 				var defaults = {
 		  			containerID: 'toTop', // fading element id
 					containerHoverID: 'toTopHover', // fading element hover id
 					scrollSpeed: 1200,
 					easingType: 'linear' 
 		 		};
-				
-				
 				$().UItoTop({ easingType: 'easeOutQuart' });
-				
 			});
 		</script>
         <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>       

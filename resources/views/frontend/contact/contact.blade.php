@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('title', 'Contact')
 @section('content')
-      <section class="">
+    <section class="">
         <img src="{{asset('images/collection_image.jpg')}}" alt="">
         <div class="container">
             <h3 class="title-w3pvt text-center">Liên Hệ Với Chúng Tôi</h3>

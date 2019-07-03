@@ -3,11 +3,10 @@
 @section('content')
 <div class="container" style="margin-top: 30px">
 	<div class="row">
-			<ol class="breadcrumb nen1">
-				  <li style="padding-bottom: 10px"><a href="{{route('home-user')}}" style="color: #000;text-decoration: none;"><span class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
-				  <li class="active">Giỏ Hàng</li>
-				  
-			</ol>
+		<ol class="breadcrumb nen1">
+			<li style="padding-bottom: 10px"><a href="{{route('home-user')}}" style="color: #000;text-decoration: none;"><span class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
+			<li class="active">Giỏ Hàng</li>
+		</ol>
 	</div>
 </div>
 @if(Cart::getTotalQuantity() > 0)
@@ -66,39 +65,37 @@
 			<br><span>{{session('success')}}</span>
 		</p>
 		<br><a href="{{route('list-all-product')}}"  style="background:#fff;color:#fa2000;padding:10px 86px;border: 2px solid #fa2000;font-weight: bold;text-decoration: none;">
-				<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
+		<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
 	</div>
 @else
 	<div class="container" style="padding-bottom: 10%">
 		Bạn chưa có sản phẩm nào trong giỏ hàng!
 		<br><br><a href="{{route('list-all-product')}}"  style="background:#fff;color:#fa2000;padding:10px 86px;border: 2px solid #fa2000;font-weight: bold;text-decoration: none;">
-				<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
+		<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
 	</div>
 @endif
 <script>
 	$(document).ready(function(){
 		$('.quantityItem').change(function(event) {
-				var qty = $(this).val();	
-				var id =	$(this).attr('data-id');	
-				//alert(id);
-				$.ajax({
-					url: "{{route('update-quantity-cart')}}",
-					type: 'GET',
-					data: {
-						qty: qty,
-						id:id,
-									},
-					success: function(data) {
-						alert('Số lượng của bạn đã được cập nhật thành công!'); 
-						location.reload();
-					},
-					error: function($error) {
-						alert('Cật nhật số lượng fail!');
-					}
-				})
-				
+			var qty = $(this).val();	
+			var id =	$(this).attr('data-id');	
+			//alert(id);
+			$.ajax({
+				url: "{{route('update-quantity-cart')}}",
+				type: 'GET',
+				data: {
+					qty: qty,
+					id:id,
+								},
+				success: function(data) {
+					alert('Số lượng của bạn đã được cập nhật thành công!'); 
+					location.reload();
+				},
+				error: function($error) {
+					alert('Cật nhật số lượng fail!');
+				}
+			})
 		});
-			
 	});
 </script>
 @stop

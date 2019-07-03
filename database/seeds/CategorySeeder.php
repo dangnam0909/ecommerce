@@ -14,20 +14,20 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
         	[
-            'name' => 'Men',
-            'slug' => 'men',
-            'description' => Str::random(30),
-            
-        ],[
-            'name' => 'Women',
-            'slug' => 'women',
-            'description' => Str::random(30),
-        ],
-        [
-            'name' => 'Kid',
-            'slug' => 'kid',
-            'description' => Str::random(30),
-        ]
-    ]);
+                'name' => 'Men',
+                'slug' => 'men',
+                'description' => Str::random(30),
+            ],
+            [
+                'name' => 'Women',
+                'slug' => 'women',
+                'description' => Str::random(30),
+            ],
+            [
+                'name' => 'Kid',
+                'slug' => 'kid',
+                'description' => Str::random(30),
+            ]
+        ]);
     }
 }

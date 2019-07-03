@@ -5,9 +5,8 @@
 		<tr>
 			<td><br><br><br><span class="spandelete"><a href="{{route('delete-cart-user',$item->id)}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')"  class="glyphicon glyphicon-remove" style="color:red;text-decoration: none;"></a></span></td>
 			<td style="color: #777;">
-				
 				<a href="{{asset('detail/'.$item->attributes->product_id.'/'.$item->attributes->slug.'.html')}}">
-					<img src="{{asset($item->attributes->image)}}" alt="" width="350px"></a>
+				<img src="{{asset($item->attributes->image)}}" alt="" width="350px"></a>
 			</td>
 			<td><span><br><br>{{$item->name}}</span></td>
 			<td style="text-align: center;">

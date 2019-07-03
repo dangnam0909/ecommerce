@@ -1,87 +1,87 @@
 @extends('frontend.master')
 @section('title', 'Login')
 @section('content')
-       <div class="login">
-          <div class="wrap">
-				<div class="col_1_of_login span_1_of_login">
-					<h4 class="title">New Customers</h4>
-					<h5 class="sub_title">Register Account</h5>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
-					<div class="button1">
-					   <a href="register.html"><input type="submit" name="Submit" value="Continue"></a>
-					 </div>
-					 <div class="clear"></div>
-				</div>
-				<div class="col_1_of_login span_1_of_login">
-				  <div class="login-title">
-	           		<h4 class="title">Registered Customers</h4>
-					 <div class="comments-area">
-						<form action="{{route('postLogin')}}" method="post">
-							@csrf()
-							<p>
-								<label>Name</label>
-								<span>*</span>
-								<input type="text" value="" name="email">
-							</p>
-							<p>
-								<label>Password</label>
-								<span>*</span>
-								<input type="password" value="" name="password">
-							</p>
-
-							@if(count($errors) > 0)
-								<div class="alert alert-danger">
-									@foreach($errors->all() as $error)
-										<li> {{$error}} </li>
-									@endforeach
-								</div>
-						 	@endif
-						 	@if(session('status'))
-								<div class="alert alert-info">
-									{{ session('status') }}
-								</div>
-						 	@endif
-						 	 <div class="sky-form">
-						 	 	<label>
-									<input type="checkbox" value="remember">
-									Ghi nhớ đăng nhập
-								</label>
-						 	 </div>
-							 <p id="login-form-remember">
-								<label><a href="#">Forget Your Password ? </a></label>
-							 </p>
-							 <p>
-								<input type="submit" value="Login">
-							</p>
-						</form>
+    <div class="login">
+		<div class="wrap">
+			<div class="col_1_of_login span_1_of_login">
+				<h4 class="title">New Customers</h4>
+				<h5 class="sub_title">Register Account</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
+				<div class="button1">
+					<a href="register.html"><input type="submit" name="Submit" value="Continue"></a>
 					</div>
-			      </div>
+					<div class="clear"></div>
+			</div>
+			<div class="col_1_of_login span_1_of_login">
+				<div class="login-title">
+				<h4 class="title">Registered Customers</h4>
+					<div class="comments-area">
+					<form action="{{route('postLogin')}}" method="post">
+						@csrf()
+						<p>
+							<label>Name</label>
+							<span>*</span>
+							<input type="text" value="" name="email">
+						</p>
+						<p>
+							<label>Password</label>
+							<span>*</span>
+							<input type="password" value="" name="password">
+						</p>
+
+						@if(count($errors) > 0)
+							<div class="alert alert-danger">
+								@foreach($errors->all() as $error)
+									<li> {{$error}} </li>
+								@endforeach
+							</div>
+						@endif
+						@if(session('status'))
+							<div class="alert alert-info">
+								{{ session('status') }}
+							</div>
+						@endif
+							<div class="sky-form">
+							<label>
+								<input type="checkbox" value="remember">
+								Ghi nhớ đăng nhập
+							</label>
+							</div>
+							<p id="login-form-remember">
+							<label><a href="#">Forget Your Password ? </a></label>
+							</p>
+							<p>
+							<input type="submit" value="Login">
+						</p>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		</div>
+        <div class="footer">
+       	<div class="footer-top">
+       		<div class="wrap">
+				<div class="col_1_of_footer-top span_1_of_footer-top">
+					<ul class="f_list">
+					<li><img src="images/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over £100*</span></li>
+					</ul>
+				</div>
+				<div class="col_1_of_footer-top span_1_of_footer-top">
+				<ul class="f_list">
+					<li><img src="images/f_icon1.png" alt=""/><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
+					</ul>
+				</div>
+				<div class="col_1_of_footer-top span_1_of_footer-top">
+					<ul class="f_list">
+						<li><img src="images/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
+					</ul>
 				</div>
 				<div class="clear"></div>
 			</div>
-		</div>
-        <div class="footer">
-       	  <div class="footer-top">
-       		<div class="wrap">
-       			   <div class="col_1_of_footer-top span_1_of_footer-top">
-				  	 <ul class="f_list">
-				  	 	<li><img src="images/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over £100*</span></li>
-				  	 </ul>
-				   </div>
-				   <div class="col_1_of_footer-top span_1_of_footer-top">
-				  	<ul class="f_list">
-				  	 	<li><img src="images/f_icon1.png" alt=""/><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
-				  	 </ul>
-				   </div>
-				   <div class="col_1_of_footer-top span_1_of_footer-top">
-				  	<ul class="f_list">
-				  	 	<li><img src="images/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
-				  	 </ul>
-				   </div>
-				  <div class="clear"></div>
-			 </div>
-       	 </div>
-       	 <div class="footer-middle">
+       	</div>
+       	<div class="footer-middle">
        	 	<div class="wrap">
        	 		<div class="section group">
 				<div class="col_1_of_middle span_1_of_middle">
