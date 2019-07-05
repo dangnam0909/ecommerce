@@ -41,6 +41,7 @@
                         <span class="" style="color:red;font-size: 13px">{{$errors->first('email')}}</span>
                     @endif
                 </div>
+                
                 <div class="form-group">
                 	<label>User Level<span style="color: red">*</span></label>
                     <select name="role_id" class="form-control">

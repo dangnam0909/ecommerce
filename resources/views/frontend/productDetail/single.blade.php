@@ -454,7 +454,7 @@ style comment*/
                 }
                 //alert(size_id);
                 if (typeof  size_id == "undefined") {
-					alert('Bạn chưa chọn kích thước!');
+					alert('Bạn chưa chọn size!');
 				}else{
 					$.ajax({
 							url: "{{route('add-cart-user')}}",
@@ -489,7 +489,7 @@ style comment*/
                 }
                 //alert(size_id);
                 if (typeof  size_id == "undefined") {
-					alert('Bạn chưa chọn kích thước!');
+					alert('Bạn chưa chọn size!');
 				}else{
 					$.ajax({
 							url: "{{route('buy-now-user')}}",

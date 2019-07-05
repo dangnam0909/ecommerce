@@ -113,7 +113,7 @@
 									@else
 										{{$product->description}}
 									@endif
-									<a href="">Mạnh Viết - CIT</a>
+									<a href="">Nam Linh - IT</a>
 									</p>
 								</li>
 							</ul>

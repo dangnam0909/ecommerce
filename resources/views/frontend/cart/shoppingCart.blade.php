@@ -1,27 +1,29 @@
 @extends('frontend.master')
-@section('title', 'Giỏ hàng')
+@section('title', 'Your Cart')
 @section('content')
 <div class="container" style="margin-top: 30px">
 	<div class="row">
 		<ol class="breadcrumb nen1">
-			<li style="padding-bottom: 10px"><a href="{{route('home-user')}}" style="color: #000;text-decoration: none;"><span class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
-			<li class="active">Giỏ Hàng</li>
+			<li style="padding-bottom: 10px">
+				<a href="{{route('home-user')}}" style="color: #000; text-decoration: none;"><span class="glyphicon glyphicon-home"></span>&nbsp;Index</a>
+			</li>
+			<li class="active">Your Cart</li>
 		</ol>
 	</div>
 </div>
 @if(Cart::getTotalQuantity() > 0)
 <div class="container">
 	<div class="row" style="margin-top: -20px">
-		<div class="col-sm-9" style="border-right:1px solid #ccc;margin-bottom: 20px">
+		<div class="col-sm-9" style="border-right:1px solid #ccc; margin-bottom: 20px">
 			<form action="" method="GET">
 				<table class="table">
 					<thead>
 						<tr>
-							<th width="30%" style="color: #777;" colspan="3">SẢN PHẨM</th>
-							<th class="th1">KÍCH THƯỚC</th>
-							<th class="th1">ĐƠN GIÁ</th>
-							<th class="th1">SỐ LƯỢNG</th>
-							<th class="th1">TỔNG CỘNG</th>
+							<th width="30%" style="color: #777;" colspan="3">Product</th>
+							<th class="th1">Size</th>
+							<th class="th1">Price</th>
+							<th class="th1">Quantily</th>
+							<th class="th1">Total</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -30,24 +32,24 @@
 				</table>
 			</form>
 			<a href="{{route('list-all-product')}}"  style="background:#fff;color:#fa2000;padding:10px 86px;border: 2px solid #fa2000;font-weight: bold;text-decoration: none;">
-				<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
+				<span class="glyphicon glyphicon-heart"></span>&nbsp;Continue Shopping</a>
 		</div>
 		<div class="col-sm-3">
 			<table class="table table-hover" style="color: #777;">
 				<thead>
 					<tr>
-						<th  width="100%">TỔNG SỐ CỘNG</th>
+						<th  width="100%">Subtotal</th>
 					</tr>
 					<tr>
-						<td width="14%"><span class="">Tạm tính:</span><span class="pull-right" style="color: #000"><b>
+						<td width="14%"><span class="">provisional:</span><span class="pull-right" style="color: #000"><b>
 							{{number_format($total,0)}} ₫</b></span>
 						</td>
 					</tr>	
 					<tr>
-						<td>Shipping <span class="pull-right">Giao hàng miễn phí</span></td>
+						<td>Shipping <span class="pull-right">delivery free</span></td>
 					</tr>
 					<tr>
-						<td width="14%"><span class="">Tổng cộng:</span><span class="pull-right" style="color: #000"><b>{{number_format($total,0)}} ₫</b></span>
+						<td width="14%"><span class="">Total:</span><span class="pull-right" style="color: #000"><b>{{number_format($total,0)}} ₫</b></span>
 							 
 						</td>
 					</tr>
@@ -65,13 +67,13 @@
 			<br><span>{{session('success')}}</span>
 		</p>
 		<br><a href="{{route('list-all-product')}}"  style="background:#fff;color:#fa2000;padding:10px 86px;border: 2px solid #fa2000;font-weight: bold;text-decoration: none;">
-		<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
+		<span class="glyphicon glyphicon-heart"></span> Continue Shopping</a>
 	</div>
 @else
 	<div class="container" style="padding-bottom: 10%">
-		Bạn chưa có sản phẩm nào trong giỏ hàng!
+		You are not cart!
 		<br><br><a href="{{route('list-all-product')}}"  style="background:#fff;color:#fa2000;padding:10px 86px;border: 2px solid #fa2000;font-weight: bold;text-decoration: none;">
-		<span class="glyphicon glyphicon-heart"></span> TIẾP TỤC XEM SẢN PHẨM</a>
+		<span class="glyphicon glyphicon-heart"></span> Continue Shoping</a>
 	</div>
 @endif
 <script>

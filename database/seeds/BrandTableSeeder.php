@@ -19,28 +19,28 @@ class BrandTableSeeder extends Seeder
             'description' => Str::random(30),
             
         ],[
-            'name' => 'BlueXchange',
-            'slug' => 'bluexchange',
+            'name' => 'D&G',
+            'slug' => 'Dolce Gabbana',
             'description' => Str::random(30),
         ],
         [
-            'name' => 'PT2000',
-            'slug' => 'pt2000',
+            'name' => 'CK',
+            'slug' => 'Calvin Klein',
             'description' => Str::random(30),
         ],
         [
-            'name' => 'Jara',
-            'slug' => 'jara',
+            'name' => 'Polo',
+            'slug' => 'Polo',
             'description' => Str::random(30),
         ],
         [
-            'name' => 'New Balance',
-            'slug' => 'new-balance',
+            'name' => 'Lacoste',
+            'slug' => 'Lacoste',
             'description' => Str::random(30),
         ],
         [
-            'name' => 'Jordan',
-            'slug' => 'jordan',
+            'name' => 'LV',
+            'slug' => 'Louis Vuittion',
             'description' => Str::random(30),
         ]
     ]);

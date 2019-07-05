@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title', 'Thêm sản phẩm | DucManh-IT Shoes')
+@section('title', 'Thêm sản phẩm | NL Fashtion')
 @section('content')
 		
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">

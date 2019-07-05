@@ -5,22 +5,22 @@
 	@include('frontend.home.follow')
 	@include('frontend.home.giaohang')
 	<div class="content-bottom">
-		<div style="background: #000; color: #fff; padding: 10px 10px;margin-top: 10px;">
+		<div style="background-color: gainsboro; color: teal; padding: 10px 10px;margin-top: 10px;">
 			<div class="container">
-				<h4>SẢN PHẨM MỚI</h3>
-				<p style="font-size: 12px;">Hàng luôn được cật nhật thường xuyên</p>
+				<h3>SẢN PHẨM MỚI</h3>
+				<p style="font-size: 14px;">Hàng luôn được cật nhật thường xuyên</p>
 			</div>
 		</div>
 		<form  id="formData" name="form">
 			<div class="container" style="margin-top: 20px">
 				@include('frontend.home.product-cart')
-				<div class="clear" style="margin: auto;margin-left: 45%;">{{$products->links()}}</div>
+				<div class="clear" style="margin: auto; margin-left: 45%;">{{$products->links()}}</div>
 				<div class="clear"></div>
 			</div>
-			<div style="background: #000; color: #fff; padding: 10px 10px;">
+			<div style="background: gainsboro; color: teal; padding: 10px 10px;">
 				<div class="container">
-					<h4>SẢN PHẨM HOT</h4>
-					<p style="font-size: 12px;">Cập nhật liên tục những sản phẩm được đặt hàng nhiều nhất</p>
+					<h3>SẢN PHẨM HOT</h3>
+					<p style="font-size: 14px;">Cập nhật liên tục những sản phẩm được đặt hàng nhiều nhất</p>
 				</div>
 			</div>
 			<div class="container" style="margin-top: 20px">
@@ -29,30 +29,30 @@
 		</form>
 		<div class="clear"></div>
 		</div>
-			<div  style="background: #000; color: #fff; padding: 10px 10px;">
+			<div  style="background: gainsboro; color: teal; padding: 10px 10px;">
 				<div class="container">
-					<h4>THƯƠNG HIỆU NỔI TIẾNG</h4>
-					<p style="font-size: 12px;">Những thương hiệu hàng đầu thế giới</p>
+					<h3>THƯƠNG HIỆU NỔI TIẾNG</h3>
+					<p style="font-size: 14px;">Những thương hiệu hàng đầu thế giới</p>
 				</div>
 			</div>
 		<div class="container" style="padding: 30px">
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/chanel.jpg')}}" width="130px"></a>
+				<a href="https://www.chanel.com/en_SG/fashion.html" target="_blank"><img src="{{asset('images/thuonghieu/chanel1.png')}}" width="130" height="100"></a>
 			</div>
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/blue.jpeg')}}" width="130px"></a>
+				<a href="https://www.dolcegabbana.com" target="_blank"><img src="{{asset('images/thuonghieu/dg1.jpg')}}" width="130" height="100"></a>
 			</div>
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/pt.jpg')}}" width="130px"></a>
+				<a href="https://www.calvinklein.us/en" target="_blank"><img src="{{asset('images/thuonghieu/calvinklein.png')}}" width="150" height="100"></a>
 			</div>
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/jordam.png')}}" width="130px"></a>
+				<a href="https://www.polo.co.za/women" target="_blank"><img src="{{asset('images/thuonghieu/polo.jpg')}}" width="130"></a>
 			</div>
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/fila.png')}}" width="130px"></a>
+				<a href="https://global.lacoste.com/en/women.html" target="_blank"><img src="{{asset('images/thuonghieu/lacoste.png')}}" width="130" height="100"></a>
 			</div>
 			<div class="col-sm-2">
-				<a href="@"><img src="{{asset('images/thuonghieu/newbalanece.png')}}" width="130px"></a>
+				<a href="https://en.louisvuitton.com/eng-nl/products/sleeveless-a-line-dress-with-embroidered-patches-nvprod1430241v" target="_blank"><img src="{{asset('images/thuonghieu/lv-logo.png')}}" width="130" height="100"></a>
 			</div>
 		</div>
 

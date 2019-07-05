@@ -108,6 +108,7 @@
     cursor: pointer;
 }
 </style>
+
 <div style="background: #eee;">
 	<div class="container" >
 		<h3>Hồ Sơ Của Tôi</h3>
@@ -120,7 +121,7 @@
 	                    <div class="col-md-4">
 	                        <div class="profile-img">
 	                            <img id="avatar" src="{{asset(Auth::user()->avatar)}}" class="avatar img-circle img-thumbnail" alt=""/>
-	                           <!--   <img src="{{asset('images/avatar/avatar2.jpg')}}" class="avatar img-circle img-thumbnail" alt="avatar"> -->
+	                           	{{-- <img id="avatar" src="{{asset('images/avatar/avatar2.jpg')}}" class="avatar img-circle img-thumbnail" alt="avatar" /> --}}
 	                            <div class="file btn btn-lg btn-primary">
 	                                Đổi ảnh đại diện
 	                                <input type="file" name="image" id="img" onchange="changeImg(this)" />
@@ -132,12 +133,12 @@
 	                    </div>
 	                    <div class="col-md-6">
 	                        <div class="profile-head">
-	                                    <h3>
-	                                        {{Auth::user()->name}}
-	                                    </h3>
-	                                    <h5 style="color: blue;">
-	                                        Tài khoản khách hàng
-	                                    </h5>
+								<h3>
+									{{Auth::user()->name}}
+								</h3>
+								<h5 style="color: blue;">
+									Tài khoản khách hàng
+								</h5>
 	                                    
 	                            <ul class="nav nav-tabs" id="myTab" role="tablist">
 	                                <li class="nav-item">
@@ -157,8 +158,8 @@
 	                            <p style="font-size: 15px">Tài khoản của tôi</p>
 	                            <a href="{{route('profile-user')}}">Hồ sơ</a><br/>
 	                            <a href="{{route('view-update-password-user', Auth::user()->id)}}">Đổi mật khẩu</a><br/>
-	                            <a href="">Đơn mua</a><br/>
-	                          	<a href="">Bình luận (3)</a><br/>
+	                            <a href="#">Đơn mua</a><br/>
+	                          	<a href="#">Bình luận (3)</a><br/>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-8" style="margin-top: -60px">
@@ -214,7 +215,8 @@
 	                                        <div class="row" style="margin-top: 15px;margin-bottom: 15px;">
 	                                            <div class="col-md-4">
 	                                                <label>Ngày sinh</label>
-	                                            </div>
+												</div>
+												
 	                                            <div class="col-md-8">
                                             		@if(Auth::user()->birthday != "")
 	                                            		@php
@@ -223,7 +225,7 @@
 		                                            		$moth = $birthday[1];
 		                                            		$year = $birthday[2];
 														@endphp
-	                                            	
+
 	                                                <select id="" style="width: 70px;height: 30px;" name="day">
 	                                                	@for($i = 1; $i <= 31; $i++)
 	                                                		@if($i == $day)
@@ -269,7 +271,8 @@
 		                                                </select>
 	                                                @endif
 	                                            </div>
-	                                        </div>
+											</div>
+											
 	                                        <div class="row" style="margin-bottom: 10px;">
 	                                            <div class="col-md-4">
 	                                                <label>Số điện thoại</label>
@@ -307,6 +310,7 @@
 	        </div>
 	</div>
 </div>
+
 <script>
 	function changeImg(input){
 		    //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới

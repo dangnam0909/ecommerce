@@ -7,22 +7,45 @@
 	<div class="cont span_2_of_c1">
 		<div class="social">	
 			<ul>	
-			<li class="facebook"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"><a href="#"> </a></div><div class="border hide"><p class="num">1.51K</p></div></li>
+				<li class="facebook">
+					<a href="https://www.facebook.com/rooneynam91" target="_blank"><span> </span></a>
+					<div class="radius"> 
+						<img src="images/radius.png">
+					</div>
+					<div class="border hide"><p class="num">1.51K</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 		<div class="social">	
 			<ul>	
-				<li class="twitter"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+				<li class="twitter">
+					<a href="https://twitter.com/namdangnguyen09" target="_blank"><span> </span></a>
+					<div class="radius"> 
+						<img src="images/radius.png">
+					</div>
+					<div class="border hide">
+						<p class="num">1.51K</p>
+					</div>
+					</li>
 			</ul>
 		</div>
 			<div class="social">	
 			<ul>	
-				<li class="google"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+				<li class="google">
+					<a href="https://www.google.com.vn/" target="_blank"><span> </span></a>
+					<div class="radius"> <img src="images/radius.png"></div>
+					<div class="border hide"><p class="num">1.51K</p></div>
+				</li>
 			</ul>
 			</div>
 			<div class="social">	
 			<ul>	
-				<li class="dot"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+				<li class="dot">
+					<a href="https://www.instagram.com/namdangnguyen09/" target="_blank"><span> </span></a>
+					<div class="radius"> <img src="images/radius.png"></div>
+					<div class="border hide"><p class="num">1.51K</p></div>
+				</li>
 			</ul>
 		</div>
 		<div class="clear"> </div>
