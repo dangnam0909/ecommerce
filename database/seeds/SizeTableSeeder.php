@@ -23,9 +23,6 @@ class SizeTableSeeder extends Seeder
         ],
         [
             'name' => 'XL',
-        ],
-        [
-            'name' => 'XXL',
         ]
     ]);
     }

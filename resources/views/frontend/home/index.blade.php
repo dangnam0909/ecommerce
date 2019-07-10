@@ -131,7 +131,7 @@
 		}
 		//alert(size_id);
 		if (typeof  size_id == "undefined") {
-			alert('Bạn chưa chọn kích thước!');
+			alert("Bạn chưa chọn size!");
 		}else{
 			$.ajax({
 				url: "{{route('add-cart-user')}}",
@@ -139,7 +139,7 @@
 				data: {						
 					product_id:product_id,
 					size_id:size_id,
-								},
+					},
 				success: function(data) {
 					alert("Thêm giỏ hàng thành công!"); 
 					$("#getCart").html(data);
@@ -147,7 +147,7 @@
 
 				},
 				error: function($error) {
-					alert('Thêm vào giỏ hàng fail!');
+					alert("Thêm vào giỏ hàng fail!");
 				}
 			})
 		}

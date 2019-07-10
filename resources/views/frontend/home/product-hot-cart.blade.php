@@ -7,7 +7,7 @@
 		<div class="view view-fifth">
 			<div class="top_box" style="position: relative;">
 				@if($product->sale > 0)
-				<span style="border-radius: 50px;padding: 7px 4px;background:#ff6517;color:#fff;font-size: 12px;position: absolute; top: 0px;right: 0;">{{$product->sale}}%</span>
+				<span style="border-radius: 50px;padding: 7px 4px;background: #ff6517; color:#fff; font-size: 12px;position: absolute; top: 0px;right: 0;">{{$product->sale}}%</span>
 				@endif
 				<h3 class="m_1">
 					<a href="{{asset('detail/'.$product->id.'/'.$product->slug.'.html')}}" style="color: #000;text-decoration: none;">{{$product->name}}</a>
@@ -84,7 +84,7 @@
 					<li>
 					@if($quantity > 0)
 						<ul class="icon1 sub-icon1 profile_img">
-							<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #000;color: #fff; border: none;" data-id="{{$product->id}}">+ Thêm Vào Giỏ </button>
+							<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #ff6517; color: #fff; border: none; padding-top:5px; padding-bottom: 5px;" data-id="{{$product->id}}">Add To Cart </button>
 							<ul class="sub-icon1 list">
 								<li><h3>{{$product->name}}</h3><a href=""></a></li>
 								<li><p>

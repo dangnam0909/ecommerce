@@ -414,7 +414,7 @@ p.m_2{
 }
 .list{
 	float: left;
-	background: #08080B;
+	background: #fff;
 	width: 39%;
 	padding: 2% 0;
 	text-align: center;
@@ -1583,7 +1583,7 @@ li.fb a span {
 	height: 30px;
 	width: 30px;
 	display: block;
-	background: url(../images/img-sprite.png)no-repeat -24px -317px #555;
+	background: url(../images/img-sprite.png)no-repeat -24px -317px #006AC5;
 }
 li.fb a span:hover {
 	background: url(../images/img-sprite.png) no-repeat -24px -317px #6796fd;
@@ -1592,7 +1592,7 @@ li.tw a span {
 	height: 30px;
 	width: 30px;
 	display: block;
-	background: url(../images/img-sprite.png)no-repeat -50px -317px #555;
+	background: url(../images/img-sprite.png)no-repeat -50px -317px #006AC5;
 }
 li.tw a span:hover {
 	background: url(../images/img-sprite.png) no-repeat -50px -317px #20b8ff;
@@ -1601,7 +1601,7 @@ li.g_plus a span {
 	height: 30px;
 	width: 30px;
 	display: block;
-	background: url(../images/img-sprite.png)no-repeat -78px -319px #555;
+	background: url(../images/img-sprite.png)no-repeat -78px -319px #ff2e38;
 }
 li.g_plus a span:hover {
 	background: url(../images/img-sprite.png)no-repeat -78px -319px #ed402e;
@@ -1610,10 +1610,10 @@ li.rss a span {
 	height: 30px;
 	width: 30px;
 	display: block;
-	background: url(../images/img-sprite.png)no-repeat -107px -318px #555;
+	background: url(../images/img-sprite.png)no-repeat -107px -318px #C3004D;
 }
 li.rss a span:hover {
-	background: url(../images/img-sprite.png)no-repeat -107px -318px #ff9303;
+	background: url(../images/img-sprite.png)no-repeat -107px -318px #ed402e;
 }
 #flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
 	display: none;

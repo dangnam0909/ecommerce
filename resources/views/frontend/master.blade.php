@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('css/glyphicons.css')}}">
     <link rel="stylesheet" href="{{asset('css/product.css')}}">
     <link rel="stylesheet" href="{{asset('css/slider-product.css')}}">
-
     <link href="{{asset('css/form.css')}}" rel="stylesheet">
     <link href="{{asset('css/simple-rating.css')}}" rel="stylesheet"> <!-- rating style css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -130,7 +129,8 @@
                                     <span style="font-weight: bold; color: teal;">{{ Auth::user()->name }}</span>
                                 </button>
                                 <ul class="dropdown-menu" style="background: #fff;">
-                                    <li><a href="{{route('profile-user')}}">Your Account</a></li>
+                                    <li><a href="{{route('profile-user')}}" style="color: #a51890; border-bottom: 1px solid #ccc">User profile</a></li>
+                                    <li><a href="{{route('home-admin')}}" style="color: #a51890; border-bottom: 1px solid #ccc">Administrator</a></li>
                                     <li><a href="{{route('logout')}}" style="color: #a51890;">Logout</a></li>  
                                 </ul>
                             </div>

@@ -229,8 +229,8 @@ style comment*/
 				<span class="actual">{{number_format($product->price - $product->price*$product->sale/100)}}₫</span><span style="font-size: 13px; color: #999">Đã bao gồm VAT(*)</span>
 			</div>
 			<h3 class="m_9">Sale off: <span style="border-radius: 15px;padding: 5px;background: #FFAF02;color: #fff">{{$product->sale}}%</span></h3>
-			<h4 class="m_9" style="margin-top: -15px">Thương hiệu {{$product->brand->name}}</h4>
-			<div class="btn_form" style="margin-top: -30px">
+			<h4 class="m_9" style="margin-top: -15px">Thương hiệu: {{$product->brand->name}}</h4>
+			<div class="btn_form" style="margin-top: -20px">
 				<form >
 					@csrf
 				<div class="options" style="line-height: 15px">	
@@ -299,10 +299,10 @@ style comment*/
 			<p class="m_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			<div class="social_single">	
 				<ul>	
-					<li class="fb"><a href="https://www.facebook.com/rooneynam91"><span> </span></a></li>
-					<li class="tw"><a href="#"><span> </span></a></li>
-					<li class="g_plus"><a href="https://mail.google.com"><span> </span></a></li>
-					<li class="rss"><a href="https://www.instagram.com/namdangnguyen09/"><span> </span></a></li>		
+					<li class="fb"><a href="https://www.facebook.com/rooneynam91" target="_blank"><span> </span></a></li>
+					<li class="tw"><a href="https://twitter.com/namdangnguyen09" target="_blank"><span> </span></a></li>
+					<li class="g_plus"><a href="https://mail.google.com" target="_blank"><span> </span></a></li>
+					<li class="rss"><a href="https://www.instagram.com/namdangnguyen09/" target="_blank"><span> </span></a></li>		
 				</ul>
 			</div>
 		</div>

@@ -85,7 +85,7 @@
 				<li>
 				@if($quantity > 0)
 					<ul class="icon1 sub-icon1 profile_img">
-						<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #000;color: #fff; border: none;" data-id="{{$product->id}}">+ Add to cart </button>
+						<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #ff6517; color: #fff; border: none; padding-top:5px; padding-bottom: 5px;" data-id="{{$product->id}}">Add To Cart </button>
 						<ul class="sub-icon1 list">
 							<li><h3>{{$product->name}}</h3><a href=""></a></li>
 							<li><p>
@@ -103,7 +103,7 @@
 				@else
 					<ul class="icon1 sub-icon1 profile_img nav">
 						<li role="presentation" class="disabled">
-						<button class="c1 btn" disabled="disabled" style="text-decoration: none;color:#fff;border:none;padding:11px 0;background:#000">
+						<button class="c1 btn" disabled="disabled" style="text-decoration: none;color:#fff;border:none;padding:11px 0;background: #000;">
 							<span>Tạm Hết Hàng</span>	
 							<!-- <button class="btn btn-success" style="margin-right: 10px;padding: 10px; border-radius: 0" disabled="disabled"></span>TẠM HẾT HÀNG</button>		 -->			  
 						</button>

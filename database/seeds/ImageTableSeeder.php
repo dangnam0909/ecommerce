@@ -13,49 +13,49 @@ class ImageTableSeeder extends Seeder
     {
         DB::table('images')->insert([
             [
-            'name' => 'pic.jpg',
+            'name' => 'pic1.jpg',
             'slug' => '/images/product/ao1.jpg',
             'product_id' => 1,
             'status'=> 1,
             
         ],[
-            'name' => 'pic1.jpg',
-            'slug' => '/images/product/ao2.jpg',
+            'name' => 'pic2.jpg',
+            'slug' => '/images/product/aolen.jpg',
             'product_id' => 2,
             'status'=> 1,
         ],
         [
-            'name' => 'pic2.jpg',
-            'slug' => '/images/product/ao1.jpg',
+            'name' => 'pic3.jpg',
+            'slug' => '/images/product/damsuong.jpg',
             'product_id' => 3,
             'status'=> 1,
         ],
         [
-            'name' => 'pic3.jpg',
-            'slug' => '/images/product/ao2.jpg',
+            'name' => 'pic4.jpg',
+            'slug' => '/images/product/damsuong1.jpg',
             'product_id' => 4,
             'status'=> 1,
         ],
         [
-            'name' => 'pic4.jpg',
-            'slug' => '/images/product/ao1.jpg',
+            'name' => 'pic5.jpg',
+            'slug' => '/images/product/dambody1.jpg',
             'product_id' => 5,
             'status'=> 1,
         ],
         [
-            'name' => 'pic5.jpg',
-            'slug' => '/images/product/ao2.jpg',
+            'name' => 'pic6.jpg',
+            'slug' => '/images/product/dambody1.jpg',
             'product_id' => 6,
             'status'=> 1,
         ],
         [
-            'name' => 'pic6.jpg',
-            'slug' => '/images/product/ao1.jpg',
+            'name' => 'pic7.jpg',
+            'slug' => '/images/product/dambody3.jpg',
             'product_id' => 7,
             'status'=> 1,
         ],
         [
-            'name' => 'pic7.jpg',
+            'name' => 'pic8.jpg',
             'slug' => '/images/product/ao2.jpg',
             'product_id' => 8,
             'status'=> 1,

@@ -37,7 +37,7 @@
 					</div>
 					@csrf
 					<span class="rating" style="line-height: 10px">
-						<span style="margin-left: 7px">Chọn size</span><br>
+						<span style="margin-left: 15px">Chọn size</span><br>
 						<?php $quantity = 0; ?>
 						@foreach ($product->productSizes as $productSize) 
 								<?php $quantity += $productSize->quantity; ?>	
@@ -85,7 +85,7 @@
 						<li>
 						@if($quantity > 0)
 							<ul class="icon1 sub-icon1 profile_img">
-								<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #000;color: #fff; border: none;" data-id="{{$product->id}}">+ Thêm Vào Giỏ </button>
+								<li><button class="active-icon c1 addCart" style="text-decoration: none; background: #ff6517;color: #fff; border: none;" data-id="{{$product->id}}">Add To Cart </button>
 								<ul class="sub-icon1 list">
 									<li><h3>{{$product->name}}</h3><a href=""></a></li>
 									<li><p>
