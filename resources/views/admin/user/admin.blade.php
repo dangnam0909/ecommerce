@@ -43,13 +43,13 @@
                                 <li class="dropdown pull-right">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>{{$user->name}}<span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{route('show-new-password',$user->id)}}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Đổi mật khẩu</a></li>
-                                        <li><a href="{{route('show-edit-user',$user->id)}}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sửa thông tin</a></li>
+                                        <li><a href="{{route('show-new-password',$user->id)}}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Change password</a></li>
+                                        <li><a href="{{route('show-edit-user',$user->id)}}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg>Edit information</a></li>
                                         <li>
                                             <form action="{{route('delete-user',$user->id)}}" method="POST">
                                                 @method('DELETE')
                                                 @csrf()
-                                                <button onclick="return confirm('Bạn có chắc chắn muốn xóa?')" style="background: #fff;border: none;"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Xóa tài khoản</button>
+                                                <button onclick="return confirm('Bạn có chắc chắn muốn xóa?')" style="background: #fff;border: none;"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg>Detele account</button>
                                             </form>
                                         </li>
                                     </ul>

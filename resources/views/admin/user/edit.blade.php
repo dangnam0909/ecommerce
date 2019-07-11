@@ -50,7 +50,7 @@
                     </select>
                 </div>
                 <input type="submit" name="submit" value="Sửa" class="btn btn-primary" />
-                <a href="{{route('user-admin')}}" class="btn btn-danger">Hủy</a>
+                <a href="{{route('user-admin')}}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>

@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title', 'Sản Phẩm | MV Shoes')
+@section('title', 'Product | NL Fashtion')
 @section('content')
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
@@ -7,19 +7,18 @@
 				<h1 class="page-header">Product</h1>
 			</div>
 		</div><!--/.row-->
-		
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
 				
 				<div class="panel panel-primary">
-					<div class="panel-heading">Danh sách sản phẩm</div>
+					<div class="panel-heading">List product</div>
 					<div class="panel-body">
 						<div class="bootstrap-table">
 							<div class="table-responsive">
 								<div style="margin-bottom: 15px">
-									<input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm..." name="search" id="searchProduct">
+									<input type="search" class="form-control" placeholder="Search product..." name="search" id="searchProduct">
 								</div>
-								<a href="{{route('show-add-product')}}" class="btn btn-primary">Thêm sản phẩm</a>
+								<a href="{{route('show-add-product')}}" class="btn btn-primary">Add product</a>
 								@if(session('status'))
 									<div class="alert alert-success" style="margin-top: 15px">
 										{{ session('status') }}
@@ -29,19 +28,19 @@
 									<thead>
 										<tr class="bg-primary">
 											<th style="text-align: center; ">ID</th>
-											<th width="10%" style="text-align: center;">Tên Sản phẩm</th>
-											<th style="text-align: center;">Giá sản phẩm</th>
-											<th style="text-align: center;">Khuyến mãi</th>
+											<th width="10%" style="text-align: center;">Name</th>
+											<th style="text-align: center;">Price</th>
+											<th style="text-align: center;">Coupon</th>
 											<th style="text-align: center;" width="5%">Size</th>
-											<th style="text-align: center;">Số lượng</th>
-											<th width="10%" style="text-align: center;">Ảnh sản phẩm</th>
-											<th style="text-align: center;" width="15%">Mô tả</th>
-											<th style="text-align: center;">Danh mục</th>
-											<th style="text-align: center;">Hãng</th>
-											<th style="text-align: center;">Trạng thái</th>
+											<th style="text-align: center;">Quantity</th>
+											<th width="10%" style="text-align: center;">Product image</th>
+											<th style="text-align: center;" width="15%">Description</th>
+											<th style="text-align: center;">Category</th>
+											<th style="text-align: center;">Brand</th>
+											<th style="text-align: center;">Status</th>
 										<!-- 	<th style="text-align: center;">Ngày tạo</th>
 											<th style="text-align: center;">Cập nhật</th> -->
-											<th style="text-align: center;">Tùy chọn</th>
+											<th style="text-align: center;">Option</th>
 										</tr>
 									</thead>	
 									<tbody id="getProduct">
@@ -66,8 +65,6 @@
 													@foreach($product->sizes as $item)
 														<span style="background: url(//theme.hstatic.net/1000243581/1000361905/14/bg-variant-checked.png?v=131) no-repeat right bottom #fff; padding:2px; border: 1px solid #ccc;">{{$item->name}}</span>
 													@endforeach
-														
-													
 												</td>
 												<td>
 													<?php $quantity = 0; ?>
@@ -93,9 +90,9 @@
 												<td>{{$product->category->name}}</td>
 												<td>{{$product->brand->name}}</td>
 												<td>@if($product->status == 1)
-														<span class="btn-default" style="padding: 2px">Đã hiển thị</span>
+														<span class="btn-default" style="padding: 2px">Displayed</span>
 													@else
-														<span class="btn-success" style="padding: 2px">Đang ẩn</span>
+														<span class="btn-success" style="padding: 2px">Hidden</span>
 													@endif
 												</td>
 												<!-- <td>{{$product->created_at}}</td>
@@ -127,7 +124,7 @@
 			</div>
 		</div><!--/.row-->
 	</div>	<!--/.main-->
-	searchProduct
+	search product
 <script>
 	$(document).ready(function($) {
 		$('#searchProduct').keyup(function(event) {
@@ -138,7 +135,7 @@
 				type: 'GET',
 				data: {						
 					search:search,
-								},
+					},
 				success: function(data) {
 					//alert(data); 
 					$("#getProduct").html(data);

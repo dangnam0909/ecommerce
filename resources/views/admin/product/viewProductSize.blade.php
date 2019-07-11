@@ -1,10 +1,10 @@
 @extends('admin.master')
-@section('title', 'Quản lí size sản Phẩm | MV Shoes')
+@section('title', 'Product size manager | NL Fashtion')
 @section('content')
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Kích Thước Sản Phẩm</h1>
+				<h1 class="page-header">Product size</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -12,15 +12,15 @@
 			<div class="col-xs-12 col-md-12 col-lg-12">
 				
 				<div class="panel panel-primary">
-					<div class="panel-heading">Danh sách</div>
+					<div class="panel-heading">List</div>
 					<div class="panel-body">
 						<div class="bootstrap-table">
 							<div class="table-responsive">
-								<a href="{{route('product-admin')}}" class="btn btn-primary">Quay lại</a>
+								<a href="{{route('product-admin')}}" class="btn btn-primary">Back</a>
 								<form action="{{route('add-size-product',$id)}}" method="POST">
 									@csrf
 									<div class="form-group">
-											<label for="">Thêm kích thước:</label>
+											<label for="">Add size:</label>
 											<select name="size_id" id="" style="padding: 3px">
 													@foreach($sizes as $size)
 														@if(in_array($size->id, $listSize))
@@ -29,9 +29,9 @@
 														@endif
 													@endforeach
 											</select>
-											<label for="">Số lượng:</label>
+											<label for="">Quantity:</label>
 											<input type="text" name="quantity" style="width: 6%">
-											<button type="submit" class="btn btn-success">Thêm</button>
+											<button type="submit" class="btn btn-success">Add</button>
 											@if($errors->has('quantity'))
 			    								<span style="color: red;font-size: 13px">{{$errors->first('quantity')}}</span>
 			    							@endif
@@ -46,13 +46,13 @@
 									<thead>
 										<tr class="bg-primary">
 											<th style="text-align: center;">ID</th>
-											<th width="" style="text-align: center;">Tên Sản phẩm</th>
-											<th width="" style="text-align: center;">Ảnh sản phẩm</th>
-											<th style="text-align: center;">Kích thước</th>
-											<th style="text-align: center;" width="10%">Số lượng</th>
-											<th style="text-align: center;">Ngày tạo</th>
-											<th style="text-align: center;">Cập nhật</th>
-											<th style="text-align: center;">Tùy chọn</th>
+											<th width="" style="text-align: center;">Name</th>
+											<th width="" style="text-align: center;">Product image</th>
+											<th style="text-align: center;">Size</th>
+											<th style="text-align: center;" width="10%">Quantity</th>
+											<th style="text-align: center;">Create date</th>
+											<th style="text-align: center;">Update</th>
+											<th style="text-align: center;">Option</th>
 										</tr>
 									</thead>	
 									<tbody>
@@ -80,7 +80,7 @@
 														@csrf
 														@method('DELETE')
 														<button
-														onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
+														onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
 													</form>
 													
 												</td>

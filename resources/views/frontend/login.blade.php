@@ -6,7 +6,7 @@
 			<div class="col_1_of_login span_1_of_login">
 				<h4 class="title">New Customers</h4>
 				<h5 class="sub_title">Register Account</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
+				<p>With long-term experience working in the field of fashion and high-end products, the shop is always confident to bring products of fashion design, quality assurance. Products that help customers show their sophistication and class in aesthetic sense, wish their customers are always updated and leading the trend. Shop always aims to the highest goal is to satisfy customers.</p>
 				<div class="button1">
 					<a href="register.html"><input type="submit" name="Submit" value="Continue"></a>
 					</div>

@@ -110,8 +110,8 @@
 </style>
 <div style="background: #eee;">
 	<div class="container" >
-		<h3>Hồ Sơ Của Tôi</h3>
-		<p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+		<h3>Profile</h3>
+		<p>Manager profile</p>
 		<div class="container emp-profile">
 	            <form method="post" action="{{route('post-phone-confirm-password-user', Auth::user()->id)}}" enctype="multipart/form-data">
 	            	@csrf
@@ -124,33 +124,32 @@
 	                    </div>
 	                    <div class="col-md-6">
 	                        <div class="profile-head">
-	                                    <h3>
-	                                        Đổi Số Điện Thoại
-	                                    </h3>
-	                                    <h5 style="color: blue;">
-	                                        Để cập nhật số điện thoại mới, vui lòng xác nhận bằng cách nhập mật khẩu
-	                                    </h5>
+								<h3>
+									Change phone number
+								</h3>
+								<h5 style="color: blue;">
+								To update the new phone number, please confirm password
+								{{-- Để cập nhật số điện thoại mới, vui lòng xác nhận bằng cách nhập mật khẩu --}}
+								</h5>
 	                                    
 	                            <ul class="nav nav-tabs" id="myTab" role="tablist">
 	                                <li class="nav-item">
-	                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Xác thực mật khẩu</a>
+	                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">password authentication</a>
 	                                </li>
 	                            
 	                            </ul>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-2">
-	                        <p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Đã cập nhật ngày: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
+	                        <p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Update now: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
 	                    </div>
 	                </div>
 	                <div class="row">
 	                    <div class="col-md-4">
 	                        <div class="profile-work">
-	                            <p style="font-size: 15px">Tài khoản của tôi</p>
-	                            <a href="{{route('profile-user')}}">Hồ sơ</a><br/>
-	                            <a href="{{route('view-update-password-user', Auth::user()->id)}}">Đổi mật khẩu</a><br/>
-	                            <a href="">Đơn mua</a><br/>
-	                          	<a href="">Bình luận (3)</a><br/>
+	                            <p style="font-size: 15px">Your account</p>
+	                            <a href="{{route('profile-user')}}">Profile</a><br/>
+	                            <a href="{{route('view-update-password-user', Auth::user()->id)}}">Change password</a><br/>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-8" style="margin-top: -60px">
@@ -159,11 +158,11 @@
 								 		@if(Auth::user()->phone != "")
 								 			<div class="row">
 	                                            <div class="col-md-4">
-	                                                <label>Số điện thoại</label>
+	                                                <label>Phone number</label>
 	                                            </div>
 	                                            <div class="col-md-8">
 	                                                <span>
-	                                                	{{'*********'.substr(Auth::user()->phone, 8,10)}}
+	                                                	{{'******'.substr(Auth::user()->phone, 8,10)}}
 	                                                </span>
 	                                            </div>
 	                                            	
@@ -171,7 +170,7 @@
 	                                    @endif
 	                                        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
 	                                            <div class="col-md-4">
-	                                                <label>Mật khẩu</label>
+	                                                <label>Password</label>
 	                                            </div>
 	                                            <div class="col-md-8">
 	                                                <input name="password" type="password" value="" style="padding: 5px;" autofocus>
@@ -182,8 +181,8 @@
 														<br><span class="" style="color:red;font-size: 13px">{{ session('fail') }}</span>
 												 	@endif
 	                                                <div style="margin-top: 30px;" >
-	                                                	<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 17px; border-radius: 3px;margin-right: 5px;">Xác nhận</button>
-	                                                	<a href="{{route('profile-user')}}" style=" background-color: #eee; color: #000; border: none; padding: 10px 20px; border-radius: 3px;text-decoration: none;">Quay lại</a>
+	                                                	<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 17px; border-radius: 3px;margin-right: 5px;">Comfirm</button>
+	                                                	<a href="{{route('profile-user')}}" style=" background-color: #eee; color: #000; border: none; padding: 10px 20px; border-radius: 3px;text-decoration: none;">Back</a>
 	                                               </div>
 	                                            </div>
 	                                        </div>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('css/product.css')}}">
     <link rel="stylesheet" href="{{asset('css/slider-product.css')}}">
     <link href="{{asset('css/form.css')}}" rel="stylesheet">
-    <link href="{{asset('css/simple-rating.css')}}" rel="stylesheet"> <!-- rating style css -->
+    {{-- <link href="{{asset('css/simple-rating.css')}}" rel="stylesheet"> <!-- rating style css --> --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/detail1.css')}}">
     <link rel="stylesheet" href="{{asset('css/etalage.css')}}">
@@ -26,7 +26,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/product.css') }}">
-    <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $(".dropdown img.flag").addClass("flagvisibility");
@@ -56,6 +55,7 @@
         </script>
     <!-- start menu -->     
     <link href="{{asset('css/megamenu1.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/megamenu.js')}}"></script>
     <script>
         $(document).ready(function(){$(".megamenu").megamenu();});
@@ -193,10 +193,10 @@
                     <li class="active">
                         <a href="{{ route('home-user') }}" style="text-decoration: none;">Home</a>
                     </li>
-                        @foreach($categories as $category)
-                    <li>
-                        <a href="{{ asset('san-pham/'.$category->id.'/'.$category->name) }}" style="text-decoration: none;">{{ $category->name }}</a>
-                    </li>
+                    @foreach($categories as $category)
+                        <li>
+                            <a href="{{ asset('san-pham/'.$category->id.'/'.$category->name) }}" style="text-decoration: none;">{{ $category->name }}</a>
+                        </li>
                     @endforeach
                     <li>
                         <!-- First Tier Drop Down -->
@@ -211,7 +211,7 @@
 
                         </ul>
                     </li>
-                        <li><a href="{{ route('list-all-product') }}" style="text-decoration: none;">Shop</a></li>
+                    <li><a href="{{ route('list-all-product') }}" style="text-decoration: none;">Shop</a></li>
                     <li><a href="events.html" style="text-decoration: none;">Events</a></li>
                     <li><a href="contact.html"  style="text-decoration: none;">Contact</a></li>
                 </ul>
@@ -221,7 +221,7 @@
     </header>
   
     @yield('content')
-    <div class="container-fluid divfooter" >    
+    {{-- <div class="container-fluid divfooter" >    
         <div class="container divfooter">
             <div class="col-sm-3">
                 <h4 class="textbot">CONTACT</h4>
@@ -247,7 +247,107 @@
                 <iframe src="http://shopfashion.runtime.vn/" width="340" height="260px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <div class="footer_agileinfo_w3">
+            <div class="footer_inner_info_w3ls_agileits">
+                <div class="col-md-3 footer-left">
+                    <h2><a href="{{url('/')}}"><span>NL</span>Fashtion </a></h2>
+                    <p>Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+                    <ul class="social-nav model-3d-0 footer-social social two">
+                        <li>
+                            <a href="https://www.facebook.com/rooneynam91" class="facebook" target="blank">
+                                <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/namdangnguyen09" class="twitter" target="blank">
+                                <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/namdangnguyen09" class="instagram" target="blank">
+                                <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <a href="#" class="pinterest">
+                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 footer-right">
+                <div class="sign-grds">
+                    <div class="col-md-4 sign-gd">
+                        <h4>Our <span>Information</span> </h4>
+                        <ul>
+                            <li><a href="{{url('/')}}">Home</a></li>
+                            <li><a href="{{url('about')}}">About</a></li>
+                            <li><a href="404.html">Services</a></li>
+                            <li><a href="">Short Codes</a></li>
+                            {{-- <li><a href="{{route('contact')}}">Contact</a></li> --}}
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-5 sign-gd-two">
+                        <h4>Store <span>Information</span></h4>
+                        <div class="address">
+                            <div class="address-grid">
+                                <div class="address-left">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="address-right">
+                                    <h6>Phone Number</h6>
+                                    <p>+1 234 567 8901</p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="address-grid">
+                                <div class="address-left">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="address-right">
+                                    <h6>Email Address</h6>
+                                    <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="address-grid">
+                                <div class="address-left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="address-right">
+                                    <h6>Location</h6>
+                                    <p>Broome St, NY 10002,California, USA.
+    
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 sign-gd flickr-post">
+                        <h4>Flickr <span>Posts</span></h4>
+                        <ul>
+                            <li><a href="#"><img src="{{asset('images/t1.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t2.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t3.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t4.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t1.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t2.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t3.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t2.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                            <li><a href="#"><img src="{{asset('images/t4.jpg')}}" alt=" " class="img-responsive" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
     <!-- end footer -->
     <script type="text/javascript">
         jQuery(document).ready(function($){

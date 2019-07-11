@@ -50,7 +50,7 @@
                     @endif
                 </div>
                 <div class="form-group" >
-                    <label>Ảnh chính sản phẩm<span style="color: red;">*</span></label>
+                    <label>Product image<span style="color: red;">*</span></label>
                     <input id="img" type="file" name="img" class="form-control hidden" onchange="changeImg(this)">
                     <img id="avatar" class="thumbnail" width="200px" src="{{asset('images/click.png')}}">
                     @if($errors->has('img'))
@@ -64,8 +64,8 @@
                         <option value="1">User</option>
                     </select>
                 </div>
-                <input type="submit" name="submit" value="Thêm mới" class="btn btn-primary" />
-                <a href="{{route('user-admin')}}" class="btn btn-danger">Hủy</a>
+                <input type="submit" name="submit" value="Add" class="btn btn-primary" />
+                <a href="{{route('user-admin')}}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>

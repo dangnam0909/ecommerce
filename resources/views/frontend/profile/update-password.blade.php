@@ -1,5 +1,5 @@
 @extends('frontend.master')
-@section('title', 'Đổi mật khẩu người dùng')
+@section('title', 'Change password')
 @section('content')
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
@@ -110,8 +110,8 @@
 </style>
 <div style="background: #eee;">
 	<div class="container" >
-		<h3>Hồ Sơ Của Tôi</h3>
-		<p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+		<h3>Profile</h3>
+		<p>Manager profile</p>
 		<div class="container emp-profile">
 	            <form method="post" action="{{route('update-password-user', Auth::user()->id)}}" enctype="multipart/form-data">
 	            	@csrf
@@ -126,32 +126,29 @@
 	                    <div class="col-md-6">
 	                        <div class="profile-head">
 	                                    <h3>
-	                                        Đổi Mật Khẩu
+											Change password
 	                                    </h3>
 	                                    <h5 style="color: blue;">
-	                                        Vui lòng nhập đủ thông tin để đổi mật khẩu của bạn.
+											Please enter enough information to change your password.
 	                                    </h5>
 	                                    
 	                            <ul class="nav nav-tabs" id="myTab" role="tablist">
 	                                <li class="nav-item">
-	                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Nhập mật khẩu mới</a>
+	                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Enter new password</a>
 	                                </li>
-	                            
 	                            </ul>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-2">
-	                        <p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Đã cập nhật ngày: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
+	                        <p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Update now: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
 	                    </div>
 	                </div>
 	                <div class="row">
 	                    <div class="col-md-4">
 	                        <div class="profile-work">
-	                            <p style="font-size: 15px">Tài khoản của tôi</p>
-	                            <a href="{{route('profile-user')}}">Hồ sơ</a><br/>
-	                            <a href="{{route('view-update-password-user', Auth::user()->id)}}">Đổi mật khẩu</a><br/>
-	                            <a href="">Đơn mua</a><br/>
-	                          	<a href="">Bình luận (3)</a><br/>
+	                            <p style="font-size: 15px">Your account</p>
+	                            <a href="{{route('profile-user')}}">Profile</a><br/>
+	                            <a href="{{route('view-update-password-user', Auth::user()->id)}}">Change password</a><br/>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-8" style="margin-top: -60px">
@@ -159,7 +156,7 @@
 	                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 								 			<div class="row">
 	                                            <div class="col-md-4">
-	                                                <label>Mật khẩu cũ</label>
+	                                                <label>old password</label>
 	                                            </div>
 	                                            <div class="col-md-8">
 	                                                <input name="password" type="password" value="" style="padding: 5px;" autofocus
@@ -174,7 +171,7 @@
 	                                        </div>
 	                                        <div class="row" style="margin-top: 15px;">
 	                                            <div class="col-md-4">
-	                                                <label>Mật khẩu mới</label>
+	                                                <label>new password</label>
 	                                            </div>
 	                                            <div class="col-md-8">
 	                                                <input name="password_new" type="password" value="" style="padding: 5px;" autofocus
@@ -186,7 +183,7 @@
 	                                        </div>
 	                                        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
 	                                            <div class="col-md-4">
-	                                                <label>Nhật lại khẩu mới</label>
+	                                                <label>Enter comfirm new password</label>
 	                                            </div>
 	                                            <div class="col-md-8">
 	                                                <input name="password_new_confirm" type="password" value="" style="padding: 5px;" autofocus
@@ -198,8 +195,8 @@
 														<br><span class="" style="color:red;font-size: 13px">{{ session('fail') }}</span>
 												 	@endif
 	                                                <div style="margin-top: 30px;" >
-	                                                	<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 17px; border-radius: 3px;margin-right: 5px;">Đổi mật khẩu</button>
-	                                                	<a href="{{route('profile-user')}}" style=" background-color: #eee; color: #000; border: none; padding: 10px 20px; border-radius: 3px;text-decoration: none;">Quay lại</a>
+	                                                	<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 17px; border-radius: 3px;margin-right: 5px;">Change</button>
+	                                                	<a href="{{route('profile-user')}}" style=" background-color: #eee; color: #000; border: none; padding: 10px 20px; border-radius: 3px;text-decoration: none;">Back</a>
 	                                               </div>
 	                                            </div>
 	                                        </div>

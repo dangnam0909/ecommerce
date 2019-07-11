@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cảnh Báo</title>
+	<title>Error</title>
 	<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 </head>
 <body>

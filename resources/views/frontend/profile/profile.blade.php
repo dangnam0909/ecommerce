@@ -1,5 +1,5 @@
 @extends('frontend.master')
-@section('title', 'Hồ sơ của tôi')
+@section('title', 'Profile user')
 @section('content')
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
@@ -111,8 +111,8 @@
 
 <div style="background: #eee;">
 	<div class="container" >
-		<h3>Hồ Sơ Của Tôi</h3>
-		<p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+		<h3>Profile</h3>
+		<p>Manager profile</p>
 		<div class="container emp-profile">
 			<form method="post" action="{{route('update-profile-user', Auth::user()->id)}}" enctype="multipart/form-data">
 				@csrf
@@ -123,7 +123,7 @@
 							<img id="avatar" src="{{asset(Auth::user()->avatar)}}" class="avatar img-circle img-thumbnail" alt=""/>
 							{{-- <img id="avatar" src="{{asset('images/avatar/avatar2.jpg')}}" class="avatar img-circle img-thumbnail" alt="avatar" /> --}}
 							<div class="file btn btn-lg btn-primary">
-								Đổi ảnh đại diện
+								Change avatar
 								<input type="file" name="image" id="img" onchange="changeImg(this)" />
 							</div>
 							@if($errors->has('image'))
@@ -137,29 +137,27 @@
 								{{Auth::user()->name}}
 							</h3>
 							<h5 style="color: blue;">
-								Tài khoản khách hàng
+								Account customer
 							</h5>
 									
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="nav-item">
-									<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Thông tin cá nhân</a>
+									<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">personal information</a>
 								</li>
 							
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-2">
-						<p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Đã cập nhật ngày: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
+						<p style="border: 1px solid #ccc; display: inline-block; padding: 15px"><span style="color: #000;font-weight: bold;">Updated now: </span>{{date('d/m/Y H:i:s', strtotime(Auth::user()->updated_at))}}</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="profile-work">
-							<p style="font-size: 15px">Tài khoản của tôi</p>
-							<a href="{{route('profile-user')}}">Hồ sơ</a><br/>
-							<a href="{{route('view-update-password-user', Auth::user()->id)}}">Đổi mật khẩu</a><br/>
-							<a href="#">Đơn mua</a><br/>
-							<a href="#">Bình luận (3)</a><br/>
+							<p style="font-size: 15px">Your account</p>
+							<a href="{{route('profile-user')}}">Profile</a><br/>
+							<a href="{{route('view-update-password-user', Auth::user()->id)}}">Change password</a><br/>
 						</div>
 					</div>
 					<div class="col-md-8" style="margin-top: -60px">
@@ -177,7 +175,7 @@
 								@endif
 										<div class="row" style="margin-bottom: 15px;">
 											<div class="col-md-4">
-												<label>Họ tên</label>
+												<label>Full name</label>
 											</div>
 											<div class="col-md-8">
 												<input name="name" type="text" value="{{Auth::user()->name}}" style="padding: 5px;">
@@ -190,31 +188,31 @@
 											<div class="col-md-8">
 												<span>
 													{{ substr(Auth::user()->email, 0,2).'*************@gmail.com'}}
-												</span> <a href="{{route('email-confirm-password-user', Auth::user()->id)}}">Thay đổi</a>
+												</span> <a href="{{route('email-confirm-password-user', Auth::user()->id)}}">Change</a>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-4">
-												<label style="margin-top: 15px;">Giới tính</label>
+												<label style="margin-top: 15px;">Gender</label>
 											</div>                               
 											<div class="col-md-8">										   			
 												<label for="nam" style="margin-right: 4px;margin-top: -10px;">
 													<input type="radio" value="nam" name=sex id="nam" class="productSize"  @if(Auth::user()->sex === 'nam') checked @endif />
 													<span>
-														Nam
+														Male
 													</span>
 													</label>
 												<label for="nữ" style="margin-right: 4px;margin-top: -10px;">
 													<input type="radio" value="nữ" name=sex id="nữ" class="productSize" @if(Auth::user()->sex === 'nữ') checked @endif>
 													<span>
-														Nữ
+														Female
 													</span>
 												</label>
 											</div>
 										</div>
 										<div class="row" style="margin-top: 15px;margin-bottom: 15px;">
 											<div class="col-md-4">
-												<label>Ngày sinh</label>
+												<label>Birthday</label>
 											</div>
 											
 											<div class="col-md-8">
@@ -275,26 +273,26 @@
 										
 										<div class="row" style="margin-bottom: 10px;">
 											<div class="col-md-4">
-												<label>Số điện thoại</label>
+												<label>phone number</label>
 											</div>
 											<div class="col-md-8">
 												<span>
 													@if(Auth::user()->phone == "")
-														Chưa thêm
+														chưa thêm
 													@else
 														{{'*********'.substr(Auth::user()->phone, 8,10)}} 
 													@endif
-												</span> <a href="{{route('phone-confirm-password-user', Auth::user()->id)}}">Thay đổi</a>
+												</span> <a href="{{route('phone-confirm-password-user', Auth::user()->id)}}">Change</a>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-4">
-												<label>Địa chỉ</label>
+												<label>Address</label>
 											</div>
 											<div class="col-md-8" w>
-												<input type="text" name="address" value="{{Auth::user()->address}}" style="width: 100%; padding: 5px;" placeholder="Thêm địa chỉ...">
+												<input type="text" name="address" value="{{Auth::user()->address}}" style="width: 100%; padding: 5px;" placeholder="address...">
 												<div style="margin-top: 30px;" >
-													<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 20px; border-radius: 3px">Lưu</button>
+													<button type="submit" style=" background-color: #ee4d2d; color: #fff; border: none; padding: 10px 20px; border-radius: 3px">Save</button>
 												</div>
 											</div>
 

@@ -27,21 +27,21 @@
                 @method('PUT')
                 @csrf()
                 <div class="form-group">
-                	<label>Mật khẩu mới:<span style="color: red">*</span></label>
-                    <input type="password" name="password" class="form-control" placeholder="Mật khẩu mới" value="" />
+                	<label>New password:<span style="color: red">*</span></label>
+                    <input type="password" name="password" class="form-control" placeholder="new password" value="" />
                     @if($errors->has('password'))
                         <span class="" style="color:red;font-size: 13px">{{$errors->first('email')}}</span>
                     @endif
                 </div>
                  <div class="form-group">
-                    <label>Nhập lại mật khẩu:<span style="color: red">*</span></label>
-                    <input type="password" name="confirmpassword" class="form-control" placeholder="Nhập lại mật khẩu..." value="" />
+                    <label>confirm password:<span style="color: red">*</span></label>
+                    <input type="password" name="confirmpassword" class="form-control" placeholder="Confrim password..." value="" />
                     @if($errors->has('confirmpassword'))
                         <span class="" style="color:red;font-size: 13px">{{$errors->first('confirmpassword')}}</span>
                     @endif
                 </div>
-                <button  type="submit" class="btn btn-primary">Đổi mật khẩu</button>
-                <a href="{{route('user-admin')}}" class="btn btn-danger">Hủy</a>
+                <button  type="submit" class="btn btn-primary">Change password</button>
+                <a href="{{route('user-admin')}}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>

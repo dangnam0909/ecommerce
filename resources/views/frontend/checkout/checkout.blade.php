@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Thông tin xác nhận đơn hàng</title>
+	<title>Confirm order</title>
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('css/detail1.css')}}">
 	<link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">
@@ -17,9 +17,9 @@
 					<a href="{{route('home-user')}}"><img src="{{asset('images/logo2.png')}}" alt="" style="width: 50%" ></a>
 					<ol class="breadcrumb nen1">
 						<li><a href="{{route('shoppingCart-user')}}" style="color: #000">Giỏ Hàng</a></li>
-						<li class="active">Thông tin xác nhận đơn hàng</li>
+						<li class="active">Confirm order</li>
 					</ol>
-					<h4>Thông tin xác nhận đơn hàng</h4>
+					<h4>Confirm order</h4>
 					@if(Auth::check())
 						@include('frontend.checkout.checkout1')
 					@else
@@ -41,7 +41,7 @@
 							</div>
 						@endforeach
 						<div class="col-sm-12 divtong">					
-							<span class="spantong">Tổng cộng:</span><span style="margin-left: 45%">VND</span> <span class="spantongtien"> {{number_format($total,0)}} ₫</span>
+							<span class="spantong">Subtotal:</span><span style="margin-left: 45%">VND</span> <span class="spantongtien"> {{number_format($total,0)}} ₫</span>
 						</div>
 					</div>
 				</div>

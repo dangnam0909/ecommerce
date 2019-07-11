@@ -1,12 +1,12 @@
 
 @extends('admin.master')
-@section('title', 'Bình luận sản phẩm | MV Shoes')
+@section('title', 'Comment product | NL Fashtion')
 @section('content')
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Bình luận</h1>
+				<h1 class="page-header">Comment</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -14,7 +14,7 @@
 			<div class="col-xs-12 col-md-12 col-lg-12">
 				
 				<div class="panel panel-primary">
-					<div class="panel-heading">Bình luận sản phẩm</div>
+					<div class="panel-heading">Product comment</div>
 					<div class="panel-body">
 						<div class="bootstrap-table">
 							<div class="table-responsive">
@@ -27,14 +27,14 @@
 									<thead>
 										<tr class="bg-primary">
 											<th style="text-align: center;">ID</th>
-											<th width="10%" style="text-align: center;">Họ tên</th>
+											<th width="10%" style="text-align: center;">Full Name</th>
 											<th width="14%" style="text-align: center;">Email</th>
-											<th width="5%" style="text-align: center;">Cấp</th>
-											<th width="15%" style="text-align: center;">Tên sản phẩm</th>
-											<th style="text-align: center;">Ảnh sản phẩm</th>
-											<th width=20%" style="text-align: center;">Nội dung</th>
-											<th width="10%" style="text-align: center;" width="20%">Ngày bình luận</th>
-											<th style="text-align: center;">Tùy chọn</th>
+											<th width="5%" style="text-align: center;">Role</th>
+											<th width="15%" style="text-align: center;">name product</th>
+											<th style="text-align: center;">Image</th>
+											<th width=20%" style="text-align: center;">Content</th>
+											<th width="10%" style="text-align: center;" width="20%">Date comment</th>
+											<th style="text-align: center;">Option</th>
 										</tr>
 									</thead>
 									<tbody>
